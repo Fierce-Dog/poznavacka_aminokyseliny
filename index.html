@@ -9,42 +9,55 @@
         body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
         .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
         img { 
-    width: 100%; 
-    height: 300px; /* Můžete zvětšit na 350px nebo 400px podle potřeby */
-    border-radius: 15px; 
-    object-fit: contain; /* TATO ZMĚNA zajistí, že bude vidět celý obrázek */
-    margin-bottom: 1rem; 
-    background: #fdfdfd; /* Jemné pozadí, kdyby byl obrázek úzký */
-}
+            width: 100%; 
+            height: 300px; /* Můžete zvětšit na 350px nebo 400px podle potřeby */
+            border-radius: 15px; 
+            object-fit: contain; /* TATO ZMĚNA zajistí, že bude vidět celý obrázek */
+            margin-bottom: 1rem; 
+            background: #fdfdfd; /* Jemné pozadí, kdyby byl obrázek úzký */
+        }
         input { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 16px; box-sizing: border-box; outline: none; }
         input:focus { border-color: var(--primary); }
         button { width: 100%; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 10px; margin-top: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
         #msg { margin-top: 15px; font-weight: bold; min-height: 20px; }
         #info { color: gray; font-size: 0.8rem; margin-top: 10px; }
-.card { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; /* Vytvoří stejné mezery mezi prvky */
-}
-#msg { 
-    margin: 0; 
-    padding: 10px 0;
-    order: 1; /* Zpráva bude úplně nahoře */
-}
-#info { 
-    order: 2; /* Info o pokusech bude pod zprávou */
-}
-#pic { 
-    order: 3; /* Obrázek pod info texty */
-}
-#input-area {
-    order: 4; /* Vstupní pole a tlačítko úplně dole */
-}
+        .card { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; /* Vytvoří stejné mezery mezi prvky */
+        }
+        #msg { 
+            margin: 0; 
+            padding: 10px 0;
+            order: 1; /* Zpráva bude úplně nahoře */
+        }
+        #info { 
+            order: 2; /* Info o pokusech bude pod zprávou */
+        }
+        #pic { 
+            order: 3; /* Obrázek pod info texty */
+        }
+        #input-area {
+            order: 4; /* Vstupní pole a tlačítko úplně dole */
+        }
+        .back-link {
+            display: block; /* Zajistí, že odkaz zabere celou šířku a umožní zarovnání */
+            text-align: left; /* Tlačí text odkazu doleva */
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #888;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: var(--primary);
+        }
     </style>
 </head>
 <body>
 
 <div class="card">
+    <a href="https://fierce-dog.github.io/poznavacky_linktree/" class="back-link">⬅ Zpět na rozcestí</a>
     <p id="msg">Máš 3 pokusy</p>
     <p id="info"></p>
     <img id="pic" src="" alt="Načítám...">
